@@ -1,5 +1,4 @@
-
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 void TopRows(int N, int rowNumber) {	//cout top N/2 rows of single M char
@@ -56,16 +55,18 @@ void MChar(int N, int rowNumber) {		//cout 2 M chars
 }
 
 int main() {
-	int N = 0;
-	cout<< "Input odd number between 3 and 99999" << endl;
+	unsigned short N = 1;
+	cout << "Please input an odd number between 3 and 99999 including" << endl;
 	cin >> N;
 	if (N < 3 || N>99999 || N % 2 == 0) {
-		cout << "Invalid number! Please input odd number between 3 and 99999" << endl;
+		cout << "Invalid input! Please input an odd number between 3 and 99999 including" << endl;
 	}
-	cout << "N = " << N << endl;
-	for (int i = 0; i <= N; i++) {
-		MChar(N, i);
-		cout << endl;
+	else {
+		cout << "N = " << N << endl;
+		for (int i = 0; i <= N; i++) {
+			MChar(N, i);
+			cout << endl;
+		}
 	}
 
 	system("pause");
